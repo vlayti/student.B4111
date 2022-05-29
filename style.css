@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Scada:wght@400;700&display=swap");
+
+body {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  grid-template-rows: 50px auto 150px;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+}
+header {
+  grid-area: header;
+  background-color: rgb(255, 255, 255);
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  column-gap: 20px;
+  align-items: center;
+}
+header img {
+  height: 50px;
+  width: auto;
+}
+header h1 {
+  margin: 0;
+  font-size: 30px;
+}
+main {
+  grid-area: main;
+  background-color: rgb(204, 0, 0);
+  padding: 20px;
+}
+main section {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  column-gap: 10px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+main section p {
+  font-family: "Scada", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+}
+main section img {
+  width: 100px;
+  height: auto;
+}
+main section.video {
+  margin: 30px auto;
+  width: 560px;
+  height: 315px;
+}
+nav {
+  grid-area: sidebar;
+  background-color: rgb(255, 255, 255);
+}
+footer {
+  grid-area: footer;
+  background-color: rgb(44, 44, 44);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "menu contacts"
+    "copy copy";
+}
+footer nav {
+  background: none;
+  grid-area: menu;
+}
+footer section {
+  grid-area: contacts;
+}
+footer section h3,
+footer a,
+footer li {
+  color: white;
+}
+footer p {
+  grid-area: copy;
+  text-align: center;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+}
